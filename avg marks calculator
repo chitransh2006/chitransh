@@ -1,0 +1,12 @@
+a=int(input('number of students ?',))
+dict1={}
+
+for i in range(a):
+    name=input('name of student is:',)
+    marks=int(input('marks of student is:',))
+    dict1[name]=marks
+    
+
+l=sum(dict1.values())
+
+print('the average marks of students is =',l/a)
