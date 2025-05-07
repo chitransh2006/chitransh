@@ -1,0 +1,44 @@
+to_do_list=[]
+
+def add_task():
+    a=input("add a task => ")
+    to_do_list.append(a)
+def view_tasks():
+    print(to_do_list)
+def remove_task():
+    print(list)
+    try:
+        task_no =int(input(f'tell the number of the task you want to remove =>'))
+        if 1<=task_no<=len(to_do_list):
+            rem=to_do_list.pop(task_no-1)
+            print(f'removed => {rem}')
+        else :
+            print("be in limit.")
+    except ValueError:
+        print("please give integers")
+    
+def main():
+    while True:
+        print('''what you want to do .
+        1.add a task.
+        2.remove a task.
+        3.view all the tasks.
+        4.exit
+        ''')
+        choice=int(input("choose from 1 to 5 : "))
+        try:
+            if choice==1:
+                add_task()
+            elif choice==2:
+                remove_task()
+            elif choice==3:
+                view_tasks()
+            elif choice==4:
+                print("goodbye")
+                break
+            else :
+                print("please choose from 1 to 4 ")
+        except ValueError :
+            print("please use integers only.")
+
+main()
