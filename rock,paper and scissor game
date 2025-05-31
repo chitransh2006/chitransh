@@ -3,7 +3,7 @@ print("rock ,paper and scissor game.")
 lst1=["rock","paper","scissor"]
 def main():    
         comp_choice=random.choice(lst1)
-       
+        print(comp_choice)
         user_choice=input("choose rock paper or scissor. : ",).lower()
         if comp_choice==user_choice:
              print('it is a tie')
@@ -12,15 +12,15 @@ def main():
             if user_choice=="paper":
                 print(f"computer choosed {comp_choice} you WON!!!")
             elif user_choice=="scissor":
-                print("you lose")
+                print("computer choosed {comp_choice} you LOSE...")
             else:
                 print("please only use rock ,paper or scissor as input.")
 
         elif comp_choice=="paper":
             if user_choice=="scissor":
                 print(f"computer choosed {comp_choice} you WON!!!")
-            elif user_choice=="paper":
-                print("you lose")
+            elif user_choice=="rock":
+                print(f"computer choosed {comp_choice} you LOSE...")
             else:
                 print("please only use rock ,paper or scissor as input.")
 
@@ -28,7 +28,7 @@ def main():
             if user_choice=="rock":
                 print(f"computer choosed {comp_choice} you WON!!!")
             elif user_choice=="paper":
-                print("you lose,try again.")
+                print("computer choosed {comp_choice} you LOSE...")
             else:
                 print("please only use rock ,paper or scissor as input.")           
 main()
