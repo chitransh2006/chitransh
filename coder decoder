@@ -1,0 +1,26 @@
+import random
+import string
+
+l=string.ascii_lowercase
+k=''.join(random.choice(l) for i in range(3)) 
+n=''.join(random.choice(l) for i in range(3)) 
+
+
+m=input("choose,what you want to do (code/decode) : ")
+
+if m == "code":
+    a = input("write the word you want to code : ",) 
+    b=a[1:] 
+    c=a[:1]
+    Code = k+b+n+c
+    code1 = Code[::-1]
+    print(f"your code word is : {code1}")
+
+if m =="decode":
+   po = input("write the word you want to decode : ",) 
+   a = po[::-1]
+   last = a[-1:]
+   b = a[3:]
+   c = b[:-1]
+   d = c[:-3]
+   print(f"The decoded word is : {last+d}")
