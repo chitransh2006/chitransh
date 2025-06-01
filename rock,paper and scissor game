@@ -3,7 +3,6 @@ print("rock ,paper and scissor game.")
 lst1=["rock","paper","scissor"]
 def main():    
         comp_choice=random.choice(lst1)
-        print(comp_choice)
         user_choice=input("choose rock paper or scissor. : ",).lower()
         if comp_choice==user_choice:
              print('it is a tie')
